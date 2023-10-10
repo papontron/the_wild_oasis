@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
 `;
 
 export default function Header() {
-  return <StyledHeader>header</StyledHeader>;
+  return <StyledHeader>THE WILD OASIS - PAPONTRON inc</StyledHeader>;
 }
 
 {
