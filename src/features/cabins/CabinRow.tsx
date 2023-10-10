@@ -49,7 +49,7 @@ const Discount = styled(Field)`
 export default function CabinRow({ cabin }: { cabin: CabinForm }) {
   // eslint-disable-next-line
   const [showForm, setShowForm] = useState<boolean>(false);
-
+  console.log({ showForm });
   const { isLoading, mutate } = useDeleteCabin();
   const { isLoading: isDuplicating, mutate: duplicate } =
     useInsertOrEditCabin('Copy');
