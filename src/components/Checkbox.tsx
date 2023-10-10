@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 const StyledCheckbox = styled.div`
@@ -24,17 +25,31 @@ const StyledCheckbox = styled.div`
   }
 `;
 
-function Checkbox({ checked, onChange, disabled = false, id, children }) {
+interface CheckBoxProps {
+  checked: boolean;
+  onChange: () => void;
+  disabled: boolean;
+  id: number;
+  children: ReactNode;
+}
+//eslint-disable-next-line
+function Checkbox({
+  checked,
+  onChange,
+  disabled = false,
+  id,
+  children,
+}: CheckBoxProps) {
   return (
     <StyledCheckbox>
       <input
         type="checkbox"
-        id={id}
+        id={id + ''}
         checked={checked}
         onChange={onChange}
         disabled={disabled}
       />
-      <label htmlFor={!disabled ? id : ''}>{children}</label>
+      <label htmlFor={!disabled ? id + '' : ''}>{children}</label>
     </StyledCheckbox>
   );
 }
